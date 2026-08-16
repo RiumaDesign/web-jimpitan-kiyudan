@@ -1,0 +1,21 @@
+{
+  "name": "Jimpitan Pemuda Dusun Kiyudan",
+  "short_name": "Jimpitan Kiyudan",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#047857",
+  "description": "Sistem Informasi Jimpitan, Tabungan Warga, dan Kas Dusun Kiyudan",
+  "icons": [
+    {
+      "src": "assets/img/logo_kiyudan.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/img/logo_kiyudan.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

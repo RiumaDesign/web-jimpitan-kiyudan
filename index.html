@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Digital Jimpitan Pemuda Dusun Kiyudan</title>
+  <meta name="description" content="Sistem Informasi Pengelolaan Jimpitan, Tabungan Warga, Kas Pemuda, dan Kas Dusun Kiyudan, Desa Majaksingi, Kecamatan Borobudur.">
+  
+  <!-- Favicon / Logo -->
+  <link rel="icon" type="image/jpeg" href="assets/img/logo_kiyudan.jpg">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pengambilan.css">
+  <link rel="stylesheet" href="css/print.css">
+
+  <!-- Chart.js for Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- APP HEADER -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="#/" class="brand-wrapper" id="brandLink">
+        <img src="assets/img/logo_kiyudan.jpg" alt="Logo Dusun Kiyudan" class="brand-logo-img">
+        <div class="brand-text">
+          <h1>JIMPITAN KIYUDAN</h1>
+          <p>Pemuda Dusun Kiyudan • Desa Majaksingi</p>
+        </div>
+      </a>
+
+      <!-- NAVIGATION LINKS -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <!-- Populated dynamically based on Auth State -->
+        </ul>
+      </nav>
+
+      <!-- HEADER ACTIONS -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button class="btn btn-icon btn-secondary" id="themeToggleBtn" onclick="app.toggleTheme()" title="Ganti Tema">
+          🌙
+        </button>
+
+        <!-- Auth / Portal Action Buttons -->
+        <div id="authHeaderActions" style="display: flex; gap: 0.5rem;">
+          <!-- Injected by app.js -->
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" onclick="document.getElementById('navMenu').classList.toggle('open')">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APP CONTENT -->
+  <main class="main-wrapper" id="mainContent">
+    <!-- Dynamic View Content Injected Here -->
+  </main>
+
+  <!-- APP FOOTER -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div>
+        <strong>Sistem Digital Jimpitan & Kas Dusun Kiyudan</strong><br>
+        <span style="font-size: 0.8125rem;">Desa Majaksingi, Kecamatan Borobudur, Kabupaten Magelang</span>
+      </div>
+      <div style="text-align: right;">
+        <span class="badge badge-success">Guyub Rukun Maju Bersama</span><br>
+        <span style="font-size: 0.75rem; color: var(--text-muted);">© 2026 Pemuda Dusun Kiyudan</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GLOBAL MODAL DIALOG CONTAINER -->
+  <div class="modal-backdrop" id="globalModalBackdrop">
+    <div class="modal-box" id="globalModalBox">
+      <div class="modal-header">
+        <h3 class="modal-title" id="globalModalTitle">Konfirmasi</h3>
+        <button class="modal-close-btn" onclick="app.closeGlobalModal()">✕</button>
+      </div>
+      <div class="modal-body" id="globalModalBody">
+        <!-- Modal content -->
+      </div>
+      <div class="modal-footer" id="globalModalFooter">
+        <!-- Action buttons -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="appToast" style="display: none; position: fixed; bottom: 24px; right: 24px; z-index: 1000; background: #0f172a; color: #ffffff; padding: 0.875rem 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-xl); font-size: 0.875rem; font-weight: 600; transition: opacity 0.3s ease; border-left: 4px solid var(--primary-500);">
+    Notifikasi
+  </div>
+
+  <!-- PRINT REPORT CONTAINER (Official Kop & Signatures) -->
+  <div id="print-container"></div>
+
+  <!-- JavaScript ES Module Entry Point -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
